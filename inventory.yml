@@ -1,0 +1,7 @@
+zsystem:
+  hosts:
+    zos_host:
+      ansible_host: ec33010a.vmec.svl.ibm.com
+      ansible_user: omvsadm
+      ansible_port: 22
+      ansible_python_interpreter: /python/3.8.3.ptf1/usr/lpp/IBM/cyp/v3r8/pyz/bin/python3

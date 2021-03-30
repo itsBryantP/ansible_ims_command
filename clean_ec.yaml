@@ -1,0 +1,19 @@
+- hosts: zos_host
+  collections:
+    - ibm.ibm_zos_ims
+  gather_facts: no
+
+  environment: "{{ environment_vars }}"
+  vars_files:
+    - "ims_commands.yml"
+
+  tasks:
+  - name: loop through and run ims commands
+    ims_command:
+      command: "{{ item }}"
+      plex: "{{ ims_plex }}"
+      route: "{{ ims_ssid }}"
+    loop: '{{ commands }}'
+
+
+

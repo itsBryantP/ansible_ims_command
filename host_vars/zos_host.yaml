@@ -1,0 +1,18 @@
+PYZ: /python/3.8.3.ptf1/usr/lpp/IBM/cyp/v3r8/pyz
+ZOAU: /zoau/v1.0.3-ptf2
+
+environment_vars:
+  _BPXK_AUTOCVT: "ON"
+  ZOAU_HOME: "{{ ZOAU }}"
+  PYTHONPATH: "{{ ZOAU }}/lib"
+  LIBPATH: "{{ ZOAU }}/lib:{{ PYZ }}/lib:/lib:/usr/lib:."
+  PATH: "{{ ZOAU }}/bin:{{ PYZ }}/bin:/bin:/var/bin:/usr/lpp/java/J8.0/bin"
+  _CEE_RUNOPTS: "FILETAG(AUTOCVT,AUTOTAG) POSIX(ON)"
+  _TAG_REDIR_ERR: "txt"
+  _TAG_REDIR_IN: "txt"
+  _TAG_REDIR_OUT: "txt"
+  LANG: "C"
+  STEPLIB: IMSBLD.I15RTSMM.COMRESL1
+
+ims_plex: PLEX1
+ims_ssid: IMS1
