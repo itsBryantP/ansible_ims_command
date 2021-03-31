@@ -7,6 +7,7 @@
   vars_files:
     - "ims_commands.yml"
 
+  # loop over tasks specified in command_tasks.yml
   tasks:
     - name: run IMS command and print output
       include_tasks: command_tasks.yml
