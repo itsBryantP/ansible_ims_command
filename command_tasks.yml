@@ -1,8 +1,10 @@
 ---
+# register the input command to variable
 - name: register command
   set_fact:
     input_command: "{{ item }}"
 
+# run the IMS command
 - name: loop through and run ims commands
   ims_command:
     command: "{{ item }}"
@@ -10,6 +12,7 @@
     route: "{{ ims_ssid }}"
   register: command_output
 
+# print the output of IMS command
 - name: print output
   debug:
     msg:
