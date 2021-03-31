@@ -1,0 +1,11 @@
+---
+- name: loop through and run ims commands
+  ims_command:
+    command: "{{ item }}"
+    plex: "{{ ims_plex }}"
+    route: "{{ ims_ssid }}"
+  register: command_output
+
+- name: print output
+  debug:
+    var: command_output.ims_output
