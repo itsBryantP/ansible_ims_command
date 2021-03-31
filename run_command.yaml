@@ -8,12 +8,9 @@
     - "ims_commands.yml"
 
   tasks:
-  - name: loop through and run ims commands
-    ims_command:
-      command: "{{ item }}"
-      plex: "{{ ims_plex }}"
-      route: "{{ ims_ssid }}"
-    loop: '{{ commands }}'
+    - name: run IMS command and print output
+      include_tasks: command_tasks.yml
+      loop: '{{ commands }}'
 
 
 
