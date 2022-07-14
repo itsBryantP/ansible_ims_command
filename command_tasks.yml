@@ -5,7 +5,7 @@
     input_command: "{{ item }}"
 
 # run the IMS command
-- name: loop through and run ims commands
+- name: loop through and run ims commands. Command - {{item}}
   ims_command:
     command: "{{ item }}"
     plex: "{{ ims_plex }}"
